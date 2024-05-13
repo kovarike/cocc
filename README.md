@@ -5,6 +5,8 @@
  <p align="center">Created a sistem for generation of token's and id's.</p>
  <p>the system exports three functions Toke, Id and Uid</p>
 
+  ### `npm i cocc`
+  
  ### Toke or cToke
   <p>The toke can be imported in two ways, cToke which is a toke verified for its uniqueness and Toke which is a function where authenticity is given to the generated toke</p>
   
@@ -15,4 +17,5 @@
 
   ### cid or Id
   <p>>cid can be imported in two ways, cid which is a verified id for its uniqueness and Id which is a function where authenticity is given to the generated id, both have a combination with characters that makes it a longer id</p>
+
 </div>
