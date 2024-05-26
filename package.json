@@ -1,6 +1,6 @@
 {
   "name": "@kovarike/cocc",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Created a sistem for generation of token's and id's",
   "main": "dist/cocc.commonjs.js",
   "module": "dist/cocc.js",
