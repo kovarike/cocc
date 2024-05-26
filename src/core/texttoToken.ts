@@ -10,13 +10,13 @@ export function TextToToken(array: string[], setStrings: Set<string>): string {
 
   Shuffle(renderToken);
 
-  const toke = renderToken.join('');
+  const token = renderToken.join('');
 
-  if (setStrings.has(toke)) {
+  if (setStrings.has(token)) {
       return TextToToken(array, setStrings);
     }else {
-      setStrings.add(toke);
-      return toke;
+      setStrings.add(token);
+      return token;
     }
 }
 

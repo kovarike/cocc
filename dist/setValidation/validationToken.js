@@ -17,12 +17,12 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/setValidation/validationToke.ts
-var validationToke_exports = {};
-__export(validationToke_exports, {
-  ValidationToke: () => ValidationToke
+// src/setValidation/validationToken.ts
+var validationToken_exports = {};
+__export(validationToken_exports, {
+  ValidationToken: () => ValidationToken
 });
-module.exports = __toCommonJS(validationToke_exports);
+module.exports = __toCommonJS(validationToken_exports);
 
 // src/core/texttoToken.ts
 function TextToToken(array, setStrings) {
@@ -34,12 +34,12 @@ function TextToToken(array, setStrings) {
   };
   const renderToken = array.slice();
   Shuffle(renderToken);
-  const toke = renderToken.join("");
-  if (setStrings.has(toke)) {
+  const token = renderToken.join("");
+  if (setStrings.has(token)) {
     return TextToToken(array, setStrings);
   } else {
-    setStrings.add(toke);
-    return toke;
+    setStrings.add(token);
+    return token;
   }
 }
 
@@ -117,8 +117,8 @@ var TextCaracter = [
   "0"
 ];
 
-// src/setValidation/validationToke.ts
-function ValidationToke() {
+// src/setValidation/validationToken.ts
+function ValidationToken() {
   const set = /* @__PURE__ */ new Set();
   const Sequence = TextToToken(TextCaracter, set);
   if (Sequence !== Sequence) {
@@ -128,5 +128,5 @@ function ValidationToke() {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  ValidationToke
+  ValidationToken
 });

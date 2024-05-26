@@ -1,61 +1,4 @@
 "use strict";
-var __defProp = Object.defineProperty;
-var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-var __getOwnPropNames = Object.getOwnPropertyNames;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
-};
-var __copyProps = (to, from, except, desc) => {
-  if (from && typeof from === "object" || typeof from === "function") {
-    for (let key of __getOwnPropNames(from))
-      if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
-  }
-  return to;
-};
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// src/cocc.ts
-var cocc_exports = {};
-__export(cocc_exports, {
-  Authenticate: () => Authenticate,
-  AuthenticateID: () => AuthenticateID,
-  AuthenticateUID: () => AuthenticateUID,
-  Id: () => Id,
-  NumberCaracter: () => NumberCaracter,
-  NumberToID: () => NumberToID,
-  TextCaracter: () => TextCaracter,
-  TextToToken: () => TextToToken,
-  Token: () => Token,
-  UID: () => UID,
-  UIDCaracter: () => UIDCaracter,
-  Uid: () => Uid,
-  ValidationID: () => ValidationID,
-  ValidationToken: () => ValidationToken,
-  ValidationUID: () => ValidationUID
-});
-module.exports = __toCommonJS(cocc_exports);
-
-// src/core/texttoToken.ts
-function TextToToken(array, setStrings) {
-  const Shuffle = (array2) => {
-    for (let index = array2.length - 1; index > 0; index--) {
-      const randomIndex = Math.floor(Math.random() * (index + 1));
-      [array2[index], array2[randomIndex]] = [array2[randomIndex], array2[index]];
-    }
-  };
-  const renderToken = array.slice();
-  Shuffle(renderToken);
-  const token2 = renderToken.join("");
-  if (setStrings.has(token2)) {
-    return TextToToken(array, setStrings);
-  } else {
-    setStrings.add(token2);
-    return token2;
-  }
-}
 
 // src/caracterRandom/textcaracterToke.ts
 var TextCaracter = [
@@ -130,6 +73,25 @@ var TextCaracter = [
   "9",
   "0"
 ];
+
+// src/core/texttoToken.ts
+function TextToToken(array, setStrings) {
+  const Shuffle = (array2) => {
+    for (let index = array2.length - 1; index > 0; index--) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [array2[index], array2[randomIndex]] = [array2[randomIndex], array2[index]];
+    }
+  };
+  const renderToken = array.slice();
+  Shuffle(renderToken);
+  const token2 = renderToken.join("");
+  if (setStrings.has(token2)) {
+    return TextToToken(array, setStrings);
+  } else {
+    setStrings.add(token2);
+    return token2;
+  }
+}
 
 // src/setValidation/validationToken.ts
 function ValidationToken() {
@@ -269,21 +231,22 @@ function Uid() {
   const auth = AuthenticateUID(uid, setSequence);
   return auth;
 }
-// Annotate the CommonJS export names for ESM import in node:
-0 && (module.exports = {
-  Authenticate,
-  AuthenticateID,
-  AuthenticateUID,
-  Id,
-  NumberCaracter,
-  NumberToID,
-  TextCaracter,
-  TextToToken,
+
+// src/cocc.commonjs.ts
+exports.TextCaracter = TextCaracter;
+exports.TextToToken = TextToToken;
+exports.Authenticate = Authenticate;
+exports.ValidationToken = ValidationToken;
+exports.NumberCaracter = NumberCaracter;
+exports.NumberToID = NumberToID;
+exports.AuthenticateID = AuthenticateID;
+exports.ValidationID = ValidationID;
+exports.UIDCaracter = UIDCaracter;
+exports.UID = UID;
+exports.AuthenticateUID = AuthenticateUID;
+exports.ValidationUID = ValidationUID;
+module.exports = {
   Token,
-  UID,
-  UIDCaracter,
-  Uid,
-  ValidationID,
-  ValidationToken,
-  ValidationUID
-});
+  Id,
+  Uid
+};

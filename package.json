@@ -1,17 +1,18 @@
 {
   "name": "@kovarike/cocc",
-  "version": "1.5.3",
+  "version": "1.5.5",
   "description": "Created a sistem for generation of token's and id's",
-  "main": "dist/cocc.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cocc.commonjs.js",
+  "module": "dist/cocc.js",
+  "types": "dist/cocc.d.ts",
   "scripts": {
     "dev": "tsx watch src/cocc.ts",
     "test": "tsx watch test/test.ts",
     "build": "tsup src",
     "start": "node dist/cocc.js"
   },
-  "keywords": [],
-  "author": "Danilo",
+  "keywords": ["id", "token"],
+  "author": "Danilo Silva",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -21,8 +22,13 @@
     "url": "https://github.com/kovarike/cocc/issues"
   },
   "homepage": "https://github.com/kovarike/cocc#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+ 
   "files": [
-    "dist/**/*"
+    "dist"
+    
   ],
   "devDependencies": {
     

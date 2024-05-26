@@ -32,12 +32,12 @@ function TextToToken(array, setStrings) {
   };
   const renderToken = array.slice();
   Shuffle(renderToken);
-  const toke = renderToken.join("");
-  if (setStrings.has(toke)) {
+  const token = renderToken.join("");
+  if (setStrings.has(token)) {
     return TextToToken(array, setStrings);
   } else {
-    setStrings.add(toke);
-    return toke;
+    setStrings.add(token);
+    return token;
   }
 }
 // Annotate the CommonJS export names for ESM import in node:
