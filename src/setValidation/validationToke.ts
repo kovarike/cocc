@@ -1,25 +1,13 @@
-import { shuffleTextToToke } from "../core/shuffleText";
+import { TextToToken } from "../core/texttoToken";
+import { TextCaracter } from "../caracterRandom/textcaracterToke";
 
-
-function isSequenceUnique(sequence: string, set: Set<string>): boolean {
-  return !set.has(sequence);
-}
-
-export function ValidateToke(array: string[]): string | null {
+export function ValidationToke(): string{
   const set = new Set<string>();
-
-  // Tentar gerar sequências únicas até que todas as possibilidades sejam exauridas
-  let attempts = array.length * 2; // Número arbitrário de tentativas
-  while (attempts > 0) {
-      const shuffledSequence = shuffleTextToToke(array);
-      if (isSequenceUnique(shuffledSequence, set)) {
-          set.add(shuffledSequence);
-          return shuffledSequence;
-      }
-      attempts--;
+  const Sequence = TextToToken(TextCaracter, set);
+  if (Sequence !== Sequence) {    
+    return Sequence;
   }
-
-  return null; // Se todas as possibilidades forem exauridas e não houver sequências únicas
+  return Sequence;
 }
 
 

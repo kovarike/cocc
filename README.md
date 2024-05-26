@@ -7,15 +7,15 @@
 
   ### `npm i cocc`
   
- ### Toke or cToke
-  <p>The toke can be imported in two ways, cToke which is a toke verified for its uniqueness and Toke which is a function where authenticity is given to the generated toke</p>
+ ### Toke 
+  <p>The token can be imported Toke which is a function where authenticity is given to the generated toke</p>
   
 
-  ### Uid or id
-  <p>The id can be imported in two ways, the id which is an id verified for its uniqueness and the Uid which is a function where authenticity is given to the generated id, both are simple id's which only contain numbers</p>
+  ### Uid
+  <p>The Uid can be imported Uid which is a function where authenticity is given to the generated id, both are simple id's which only contain numbers</p>
 
 
-  ### cid or Id
-  <p>>cid can be imported in two ways, cid which is a verified id for its uniqueness and Id which is a function where authenticity is given to the generated id, both have a combination with characters that makes it a longer id</p>
+  ### Id
+  <p>>id can be imported Id which is a function where authenticity is given to the generated id, both have a combination with characters that makes it a longer id</p>
 
 </div>

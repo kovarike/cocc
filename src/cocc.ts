@@ -1,37 +1,39 @@
-import { UCID } from "./caracterRandom/ucid";
-import { NumberCaracter } from "./caracterRandom/generationId";
-import { TextCaracter } from "./caracterRandom/generationToke";
-import { ValidateToke } from "./setValidation/validationToke";
-import { ValidateID } from "./setValidation/validationID";
-import { ValidateUID } from "./setValidation/validationUID";
-import { AuthenticateAdd, AuthenticateToke, IsAuthenticated } from "./auth/authToke";
-import { IsAuthenticatedID, AuthAddID, AuthenticateID } from "./auth/authID";
-import { AuthAddUID, AuthenticateUID, IsAuthenticatedUID } from "./auth/authUID";
+import { ValidationToke } from "./setValidation/validationToke";
+import { Authenticate} from "./auth/authToke";
+import { ValidationID } from "./setValidation/validationID";
+import {  AuthenticateID } from "./auth/authID";
+import { ValidationUID } from "./setValidation/validationUID";
+import { AuthenticateUID} from "./auth/authUID";
 
-export const cToke = ValidateToke(TextCaracter);
-export const cId = ValidateID(NumberCaracter);
-export const id = ValidateUID(UCID)
+const toke = ValidationToke()
+const id = ValidationID();
+const uid = ValidationUID()
  
 export function Toke() {
-  const auth = AuthenticateToke(cToke);
-  AuthenticateAdd(auth);
-  console.log(auth)
-  console.log("Token is authenticated", IsAuthenticated(auth)); 
+  const setSequence: Set<string> = new Set();
+  const auth = Authenticate(toke, setSequence)
+  // console.log(auth);
+  // console.log("Token is authenticated", setSequence.has(auth)); 
+  return auth;
 }
+
 
 
 
 export function Id() {
-  const auth  = AuthenticateID(cId);
-  AuthAddID(auth);
-  console.log(auth);
-  console.log("Id is authenticated", IsAuthenticatedID(auth))
+  const setSequence: Set<string> = new Set();
+  const auth = AuthenticateID(id, setSequence)
+  // console.log(auth);
+  // console.log("Token is authenticated", setSequence.has(auth)); 
+  return auth;
 }
 
 
+
 export function Uid() {
-  const auth  = AuthenticateUID(id);
-  AuthAddUID(auth);
-  console.log(auth);
-  console.log("Uid is authenticated", IsAuthenticatedUID(auth))
+  const setSequence: Set<string> = new Set();
+  const auth = AuthenticateUID(uid, setSequence)
+  // console.log(auth);
+  // console.log("Token is authenticated", setSequence.has(auth)); 
+  return auth;
 }

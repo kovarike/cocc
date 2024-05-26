@@ -1,17 +1,18 @@
-const AuthenticatedUID = new Set<string>(); // Conjunto para armazenar sequências autenticadas
+import { ValidationUID } from "../setValidation/validationUID";
 
-export function AuthenticateUID(sequence: any): string {
-    return "auth_$/" + sequence; // Adiciona um prefixo para autenticar a sequência
+function IsAuthUID(sequence: string): string {
+    return "auth_$/" + sequence; 
 }
 
-function IsValidAuth(sequence: string): boolean {
-    return sequence.startsWith("auth_$/"); // Verifica se a sequência é autenticada
+export function AuthenticateUID(sequence: string, setSequence: Set<string>): string {
+    const UID = ValidationUID();
+    const authUID = IsAuthUID(UID);
+
+    if (setSequence.has(authUID)) {
+        return AuthenticateUID(sequence, setSequence);
+    } else {
+        setSequence.add(authUID);
+        return  authUID;
+    }
 }
 
-export function AuthAddUID(sequence: string): void {
-  AuthenticatedUID.add(sequence); // Adiciona a sequência autenticada ao conjunto
-}
-
-export function IsAuthenticatedUID(sequence: string): boolean {
-    return AuthenticatedUID.has(sequence); // Verifica se a sequência está autenticada
-}

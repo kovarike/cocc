@@ -1,18 +1,17 @@
-const AuthenticatedToke = new Set<string>(); // Conjunto para armazenar sequências autenticadas
+import { ValidationToke } from "../setValidation/validationToke"
 
-export function AuthenticateToke(sequence: any): string {
-    return "auth_@/" + sequence; // Adiciona um prefixo para autenticar a sequência
+function AuthenticateToke(sequence: string): string {
+    return "auth_@/" + sequence; 
 }
 
-function IsValidAuth(sequence: string): boolean {
-    return sequence.startsWith("auth_@/"); // Verifica se a sequência é autenticada
-}
+export function Authenticate(sequence: string, setSequence: Set<string>): string {
+    const toke = ValidationToke();
+    const AuthToke = AuthenticateToke(toke);
 
-export function AuthenticateAdd(sequence: string): void {
-  AuthenticatedToke.add(sequence); // Adiciona a sequência autenticada ao conjunto
+    if (setSequence.has(AuthToke)) {
+        return Authenticate(sequence, setSequence);
+    } else {
+        setSequence.add(AuthToke);
+        return  AuthToke;
+    }
 }
-
-export function IsAuthenticated(sequence: string): boolean {
-    return AuthenticatedToke.has(sequence); // Verifica se a sequência está autenticada
-}
-

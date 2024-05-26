@@ -1,19 +1,21 @@
-export function UID(array: number[]): string {
-  // Função para embaralhar o array usando o algoritmo Fisher-Yates
-  const shuffle = (array: any[]) => {
-      for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+export function UID(array: number[], setStrings: Set<string>): string {
+  const Shuffle = (array: number[]) => {
+      for (let index = array.length - 1; index > 0; index--) {
+          const randomIndex = Math.floor(Math.random() * (index + 1));
+          [array[index], array[randomIndex]] = [array[randomIndex], array[index]];
       }
   };
 
-  // Embaralhar o array de números
-  shuffle(array);
+  const renderUID = array.slice();
+  Shuffle(renderUID);
+  const ToUID = renderUID.join('');
 
-  // Converter os números embaralhados em uma sequência de caracteres
-  const charSequence = array.map(num => num.toString()).join('');
-
-  return charSequence;
+  if (setStrings.has(ToUID)) {
+      return UID(array, setStrings);
+    }else {
+      setStrings.add(ToUID);
+      return ToUID;
+    }
 }
 
-// Exemplo de uso
+
