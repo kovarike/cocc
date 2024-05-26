@@ -6,11 +6,11 @@ export function NumberToID(array: string[], setStrings: Set<string>): string {
       }
   };
 
-  const renderID = array.slice();
+  const renderID: string[] = array.slice();
 
   Shuffle(renderID);
 
-  const ID = renderID.join('');
+  const ID: string = renderID.join('');
 
   if (setStrings.has(ID)) {
       return NumberToID(array, setStrings);

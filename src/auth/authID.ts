@@ -5,8 +5,8 @@ function IsAuthID(sequence: string): string {
 }
 
 export function AuthenticateID(sequence: string, setSequence: Set<string>): string {
-    const ID = ValidationID();
-    const authID = IsAuthID(ID);
+    const ID: string = ValidationID();
+    const authID: string = IsAuthID(ID);
 
     if (setSequence.has(authID)) {
         return AuthenticateID(sequence, setSequence);

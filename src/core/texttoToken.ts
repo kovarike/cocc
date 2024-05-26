@@ -6,11 +6,11 @@ export function TextToToken(array: string[], setStrings: Set<string>): string {
       }
   };
 
-  const renderToken = array.slice();
+  const renderToken: string[] = array.slice();
 
   Shuffle(renderToken);
 
-  const token = renderToken.join('');
+  const token: string = renderToken.join('');
 
   if (setStrings.has(token)) {
       return TextToToken(array, setStrings);

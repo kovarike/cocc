@@ -5,8 +5,8 @@ function AuthenticateToken(sequence: string): string {
 }
 
 export function Authenticate(sequence: string, setSequence: Set<string>): string {
-    const token = ValidationToken();
-    const AuthToken = AuthenticateToken(token);
+    const token: string = ValidationToken();
+    const AuthToken: string = AuthenticateToken(token);
 
     if (setSequence.has(AuthToken)) {
         return Authenticate(sequence, setSequence);

@@ -8,13 +8,13 @@ import {  AuthenticateID } from "./auth/authID";
 import { ValidationUID } from "./setValidation/validationUID";
 import { AuthenticateUID} from "./auth/authUID";
 
-const token = ValidationToken()
-const id = ValidationID();
-const uid = ValidationUID()
+const token: string = ValidationToken()
+const id: string  = ValidationID();
+const uid: string  = ValidationUID()
  
 function Token(): TypeToken | string {
   const setSequence: Set<string> = new Set();
-  const auth = Authenticate(token, setSequence)
+  const auth: string = Authenticate(token, setSequence)
   // console.log(auth);
   // console.log("Token is authenticated", setSequence.has(auth)); 
   return auth;
@@ -25,7 +25,7 @@ function Token(): TypeToken | string {
 
 function Id():TypeId | string {
   const setSequence: Set<string> = new Set();
-  const auth = AuthenticateID(id, setSequence)
+  const auth: string = AuthenticateID(id, setSequence)
   // console.log(auth);
   // console.log("Token is authenticated", setSequence.has(auth)); 
   return auth;
@@ -35,7 +35,7 @@ function Id():TypeId | string {
 
 function Uid():TypeUid | string {
   const setSequence: Set<string> = new Set();
-  const auth = AuthenticateUID(uid, setSequence)
+  const auth: string  = AuthenticateUID(uid, setSequence)
   // console.log(auth);
   // console.log("Token is authenticated", setSequence.has(auth)); 
   return auth;

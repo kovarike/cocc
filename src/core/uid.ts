@@ -6,9 +6,9 @@ export function UID(array: number[], setStrings: Set<string>): string {
       }
   };
 
-  const renderUID = array.slice();
+  const renderUID: number[] = array.slice();
   Shuffle(renderUID);
-  const ToUID = renderUID.join('');
+  const ToUID:string = renderUID.join('');
 
   if (setStrings.has(ToUID)) {
       return UID(array, setStrings);
