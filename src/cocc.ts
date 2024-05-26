@@ -1,7 +1,6 @@
 import {TypeToken} from "./types/type.token"
 import {TypeId} from "./types/type.id"
 import {TypeUid} from "./types/type.uid"
-
 import { ValidationToken } from "./setValidation/validationToken";
 import { Authenticate} from "./auth/authToken";
 import { ValidationID } from "./setValidation/validationID";
