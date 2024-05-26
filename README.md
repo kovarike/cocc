@@ -5,7 +5,7 @@
  <p align="center">Created a sistem for generation of token's and id's.</p>
  <p>the system exports three functions Toke, Id and Uid</p>
 
-  ### `npm i cocc`
+  ### `npm i @kovarike/cocc`
   
  ### Toke 
   <p>The token can be imported Toke which is a function where authenticity is given to the generated toke</p>
