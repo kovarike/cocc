@@ -1,9 +1,9 @@
 {
   "name": "@kovarike/cocc",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Created a sistem for generation of token's and id's",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/cocc.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "tsx watch src/cocc.ts",
     "test": "tsx watch test/test.ts",
@@ -21,19 +21,11 @@
     "url": "https://github.com/kovarike/cocc/issues"
   },
   "homepage": "https://github.com/kovarike/cocc#readme",
-  "jest": {
-    "preset": "",
-    "testEnvironment": "node",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "lib"
-    ]
-  },
   "files": [
-    "lib/**/*"
+    "dist/**/*"
   ],
   "devDependencies": {
-    "@kovarike/cocc": "^1.5.1",
+    
     "@types/node": "^20.12.11",
     "tsup": "^8.0.2",
     "tsx": "^4.10.2",
