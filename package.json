@@ -4,8 +4,6 @@
   "description": "Created a sistem for generation of token's and id's",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  
-  
   "scripts": {
     "dev": "tsx watch src/cocc.ts",
     "test": "tsx watch test/test.ts",
@@ -34,8 +32,8 @@
   "files": [
     "lib/**/*"
   ],
-
   "devDependencies": {
+    "@kovarike/cocc": "^1.5.1",
     "@types/node": "^20.12.11",
     "tsup": "^8.0.2",
     "tsx": "^4.10.2",
