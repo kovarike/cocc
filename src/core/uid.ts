@@ -1,4 +1,4 @@
-export function UID(array: number[], setStrings: Set<string>): string {
+export function UID(array: number[], setStrings: Set<string>): string{
   const Shuffle = (array: number[]) => {
       for (let index = array.length - 1; index > 0; index--) {
           const randomIndex = Math.floor(Math.random() * (index + 1));
@@ -17,5 +17,7 @@ export function UID(array: number[], setStrings: Set<string>): string {
       return ToUID;
     }
 }
+
+
 
 

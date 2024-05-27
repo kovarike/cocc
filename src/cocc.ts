@@ -11,7 +11,7 @@ import { AuthenticateUID} from "./auth/authUID";
 const token: string = ValidationToken()
 const id: string  = ValidationID();
 const uid: string  = ValidationUID()
- 
+
 function Token(): TypeToken | string {
   const setSequence: Set<string> = new Set();
   const auth: string = Authenticate(token, setSequence)

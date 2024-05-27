@@ -13,11 +13,12 @@ export function TextToToken(array: string[], setStrings: Set<string>): string {
   const token: string = renderToken.join('');
 
   if (setStrings.has(token)) {
-      return TextToToken(array, setStrings);
-    }else {
-      setStrings.add(token);
-      return token;
-    }
+    return TextToToken(array, setStrings);
+  }else {
+    setStrings.add(token);
+    return token;
+  }
+
 }
 
 

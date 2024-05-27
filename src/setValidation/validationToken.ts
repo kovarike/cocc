@@ -6,6 +6,9 @@ export function ValidationToken(): string{
   const Sequence: string = TextToToken(TextCaracter, set);
   if (Sequence !== Sequence) {    
     return Sequence;
+ 
   }
+
   return Sequence;
+  
 }
