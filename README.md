@@ -19,6 +19,6 @@
   <p>id can be imported Id which is a function where authenticity is given to the generated id, both have a combination with characters that makes it a longer id</p>
 
   ### Logs
-  <div><a href=".https://youtu.be/H6A_F8qT4us?feature=shared">Video</a></div>
+  <a href="https://youtu.be/H6A_F8qT4us?feature=shared">Video</a>
 
 </div>
