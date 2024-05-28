@@ -19,7 +19,6 @@ export * from './core/Id';
 export * from './setValidation/validationID';
 export * from './auth/authID';
 
-
 export * from './caracterRandom/caracterUID';
 export * from './core/uid';
 export * from './setValidation/validationUID';
