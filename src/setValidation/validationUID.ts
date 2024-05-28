@@ -1,11 +1,9 @@
-import { UID } from "../core/uid";
+import { CoreUID } from "../core/uid";
 import { UIDCaracter } from "../caracterRandom/caracterUID";
 
-
-
-export function ValidationUID(): string{
+export function ValidationUID() {
   const set: Set<string> = new Set();
-  const Sequence:string = UID(UIDCaracter, set);
+  const Sequence = CoreUID({uidarray: UIDCaracter, setStrings: set});
   if (Sequence !== Sequence) {    
     return Sequence;
   }

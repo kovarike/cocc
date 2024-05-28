@@ -1,37 +1,37 @@
-import { TextCaracter } from "./caracterRandom/textcaracterToke";
-import { TextToToken } from "./core/texttoToken";
+import { TokenCaracter } from "./caracterRandom/tokencaracterToke";
+import { CoreToken } from "./core/token";
 import { Authenticate} from "./auth/authToken";
 import { ValidationToken } from "./setValidation/validationToken";
 import  {Token}  from "./cocc";
 
-import { NumberCaracter } from "./caracterRandom/numbercaracterId";
-import { NumberToID } from "./core/numbertoId";
+import { IdCaracter } from "./caracterRandom/idcaracterId";
+import { CoreID } from "./core/Id";
 import {  AuthenticateID } from "./auth/authID";
 import { ValidationID } from "./setValidation/validationID";
 import  {Id}  from "./cocc";
 
 import { UIDCaracter } from "./caracterRandom/caracterUID";
-import { UID } from "./core/uid";
+import { CoreUID } from "./core/uid";
 import { AuthenticateUID} from "./auth/authUID";
 import { ValidationUID } from "./setValidation/validationUID";
 import  {Uid}  from "./cocc";
 
-exports.TextCaracter = TextCaracter;
-exports.TextToToken = TextToToken;
+exports.TokenCaracter = TokenCaracter;
+exports.CoreToken = CoreToken;
 exports.Authenticate = Authenticate;
 exports.ValidationToken = ValidationToken;
 
-exports.NumberCaracter = NumberCaracter;
-exports.NumberToID = NumberToID;
+exports.IdCaracter = IdCaracter;
+exports.CoreID = CoreID;
 exports.AuthenticateID = AuthenticateID;
 exports.ValidationID = ValidationID;
 
 exports.UIDCaracter = UIDCaracter;
-exports.UID = UID;
+exports.CoreUID = CoreUID;
 exports.AuthenticateUID = AuthenticateUID;
 exports.ValidationUID = ValidationUID;
 
-export = {
+export{
   Token,
   Id,
   Uid

@@ -1,14 +1,11 @@
-import { TextToToken } from "../core/texttoToken";
-import { TextCaracter } from "../caracterRandom/textcaracterToke";
+import { CoreToken } from "../core/token";
+import { TokenCaracter } from "../caracterRandom/tokencaracterToke";
 
-export function ValidationToken(): string{
+export function ValidationToken() {
   const set: Set<string> = new Set();
-  const Sequence: string = TextToToken(TextCaracter, set);
+  const Sequence = CoreToken({tokenarray: TokenCaracter, setStrings: set});
   if (Sequence !== Sequence) {    
     return Sequence;
- 
   }
-
   return Sequence;
-  
 }

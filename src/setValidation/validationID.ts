@@ -1,9 +1,9 @@
-import { NumberToID } from "../core/numbertoId";
-import { NumberCaracter } from "../caracterRandom/numbercaracterId";
+import { CoreID } from "../core/Id";
+import { IdCaracter } from "../caracterRandom/idcaracterId";
 
-export function ValidationID(): string{
+export function ValidationID(){
   const set: Set<string> = new Set();
-  const Sequence: string = NumberToID(NumberCaracter, set);
+  const Sequence = CoreID({idarray: IdCaracter, setStrings: set})
   if (Sequence !== Sequence) {    
     return Sequence;
   }
