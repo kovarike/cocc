@@ -19,7 +19,7 @@ export function Token(){
 export function Uid(){
   const setSequence: Set<string> = new Set();
   const auth  = AuthenticateUID({sequence: uid, setSequence: setSequence})
-  console.log(auth);
+  //console.log(auth);
   // console.log("Token is authenticated", setSequence.has(auth)); 
   return auth;
 }
