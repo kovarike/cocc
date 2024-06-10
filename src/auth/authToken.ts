@@ -1,8 +1,9 @@
 import { ValidationToken } from "../setValidation/validationToken"
 import {TypeAuthenticate} from"../types/types"
 
-// function AuthenticateToken(sequence: string): string {
-//     return "auth_@-" + sequence; 
+// export function isToken({sequence, setSequence}:TypeAuthenticate): string {
+//     const isAuth = `Token is authenticated: ${setSequence.has(sequence)}`; 
+//     return isAuth;
 // }
 
 export function Authenticate({sequence, setSequence}:TypeAuthenticate): string {

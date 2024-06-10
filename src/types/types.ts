@@ -12,22 +12,6 @@ export type ShuffleParmsToken = {
   array: string[],
 }
 
-
-export type TypeIdCaracter = {
-  IdCaracter: string[]
-}
-
-export type IDParms = {
-  idarray: TypeIdCaracter,
-  setStrings: Set<string>
-  
-}
-
-export type ShuffleParmsID = {
-  array: string[],
-}
-
-
 export interface TypeCaracterUID{
   UIDCaracter: number[] 
 }
@@ -42,16 +26,9 @@ export type ShuffleParmsUID = {
   array: number[],
 }
 
-
-
 export interface TypeToken{
   TextToToken: (array: string[], setStrings: Set<string>) => string,
 
-}
-
-export interface TypeId{
-  ID: (array: string[], setStrings: Set<string>) => string,
-  
 }
 
 export interface TypeUID{
@@ -70,11 +47,6 @@ export interface TypeUID{
 // export interface TypeValidationUID{
 //   ValidationUID: () => string
 // }
-
-export interface TypeAutheId{
-  sequence: string,
-  setSequence: Set<string>
-}
 
 export interface TypeAuthenticate{
   sequence: string,

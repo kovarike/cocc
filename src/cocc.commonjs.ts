@@ -43,11 +43,6 @@ import { Authenticate} from "./auth/authToken";
 import { ValidationToken } from "./setValidation/validationToken";
 import { Token } from "./cocc";
 
-import { IdCaracter } from "./caracterRandom/idcaracterId";
-import { CoreID } from "./core/Id";
-import { AuthenticateID } from "./auth/authID";
-import { ValidationID } from "./setValidation/validationID";
-import { Id } from "./cocc";
 
 import { UIDCaracter } from "./caracterRandom/caracterUID";
 import { CoreUID } from "./core/uid";
@@ -60,15 +55,10 @@ export {
   CoreToken,
   Authenticate,
   ValidationToken,
-  IdCaracter,
-  CoreID,
-  AuthenticateID,
-  ValidationID,
   UIDCaracter,
   CoreUID,
   AuthenticateUID,
   ValidationUID,
   Token,
-  Id,
   Uid
 };

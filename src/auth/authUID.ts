@@ -9,7 +9,6 @@ import { TypeAutheUID} from "../types/types";
 export function AuthenticateUID({sequence, setSequence}: TypeAutheUID): string {
     const UID = ValidationUID();
     // const authUID = IsAuthUID(UID);
-
     if (setSequence.has(UID)) {
         return AuthenticateUID({sequence, setSequence});
     } else {
