@@ -1,7 +1,7 @@
 import {IDParms, ShuffleParmsID,} from "../types/types"
 
 export function CoreID({idarray, setStrings}: IDParms): string {
-  const Shuffle = ({array}: ShuffleParmsID ) => {
+  const ShuffleID = ({array}: ShuffleParmsID ) => {
     for (let index = array.length - 1; index > 0; index--) {
       const randomIndex = Math.floor(Math.random() * (index + 1));
       [array[index], array[randomIndex]] = [array[randomIndex], array[index]];
@@ -14,7 +14,7 @@ export function CoreID({idarray, setStrings}: IDParms): string {
   }
 
   const renderID = GenerateLimitedID();
-  Shuffle({array: renderID});
+  ShuffleID({array: renderID});
   const setID = renderID.join('');
 
   if (setStrings.has(setID)) {

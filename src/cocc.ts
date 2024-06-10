@@ -1,9 +1,9 @@
 import { Token, Id, Uid}from "./core/index"
 
 export{
-  Token,
-  Id,
-  Uid
+  Token as Token,
+  Id as Id,
+  Uid as Uid
 }
 
 

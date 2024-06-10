@@ -1,7 +1,7 @@
 import {TokenParms, ShuffleParmsToken} from "../types/types"
 
 export function CoreToken({tokenarray, setStrings}: TokenParms): string {
-  const Shuffle = ({array}:ShuffleParmsToken) => {
+  const ShuffleToken = ({array}:ShuffleParmsToken) => {
     for (let index = array.length - 1; index > 0; index--) {
       const randomIndex = Math.floor(Math.random() * (index + 1));
       [array[index], array[randomIndex]] = [array[randomIndex], array[index]];
@@ -14,7 +14,7 @@ export function CoreToken({tokenarray, setStrings}: TokenParms): string {
   }
   
   const renderToken = GenerateLimitedToken();
-  Shuffle({array: renderToken});
+  ShuffleToken({array: renderToken});
   const setToken = renderToken.join('');
 
   if (setStrings.has(setToken)) {
