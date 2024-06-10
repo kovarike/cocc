@@ -1,6 +1,6 @@
 {
   "name": "@kovarike/cocc",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Created a sistem for generation of token's and id's",
   "files": [
     "dist"
@@ -34,6 +34,8 @@
     "@types/node": "^20.12.11",
     "tsup": "^8.0.2",
     "tsx": "^4.10.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "uuid": "^10.0.0",
+    "uuidv4": "^6.2.13"
   }
 }

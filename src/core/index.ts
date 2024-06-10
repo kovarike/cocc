@@ -12,11 +12,11 @@ const uid = ValidationUID();
 export function Token(){
   const setSequence: Set<string> = new Set();
   const auth = Authenticate({sequence: token, setSequence: setSequence})
-  // console.log(auth);
+  console.log(auth);
   // console.log("Token is authenticated", setSequence.has(auth)); 
   return auth;
 }
-
+Token()
 
 
 
