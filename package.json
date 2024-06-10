@@ -1,6 +1,6 @@
 {
   "name": "@kovarike/cocc",
-  "version": "1.6.8",
+  "version": "1.6.9",
   "description": "Created a sistem for generation of token's and id's",
   "files": [
     "dist"
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/kovarike/cocc#readme",
   "devDependencies": {
-    "@kovarike/cocc": "^1.6.7",
+    "@kovarike/cocc": "^1.6.8",
     "@types/node": "^20.12.11",
     "tsup": "^8.0.2",
     "tsx": "^4.10.2",
