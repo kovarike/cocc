@@ -27,7 +27,7 @@ Just call one of the `{Token, Uid}` functions after importing them:
 ```typescript
 import {Token, Uid} from '@kovarike/cocc'
 
-console.log(Token()) // dYm&35secn!jNAoT%Gq$zwF4gB2f
+console.log(Token()) // 47ljai96dgh523k8b6105ef7c 
 console.log(Uid()) // 4159623708579524829 
 ```
 
@@ -35,7 +35,7 @@ console.log(Uid()) // 4159623708579524829
 ```javascript
 const {Token, Uid} = require("@kovarike/cocc")
 
-console.log(Token()) // dYm&35secn!jNAoT%Gq$zwF4gB2f
+console.log(Token()) // 47ljai96dgh523k8b6105ef7c 
 console.log(Uid()) // 4159623708579524829 
 ```
 ## API
@@ -54,7 +54,7 @@ function Token(): TypeToken | string {
   const setSequence: Set<string> = new Set();
   const auth: string = Authenticate(token, setSequence)
 
-  return auth; // dYm&35secn!jNAoT%Gq$zwF4gB2f
+  return auth; // 47ljai96dgh523k8b6105ef7c 
 }
 
 
