@@ -1,21 +1,13 @@
-declare const regex: {
-  v4: RegExp;
-  v5: RegExp;
-  token: RegExp
-};
+declare const cocc: {
+  IsValid: (params: string, value?: string) => boolean,
+  Token: () => string,
+  Id: () => string,
+}
 
 
 
-declare const Binary: () => string;
-declare const Bytes: (binaryString: string) => Uint8Array;
-declare const Hexadecimal: (bytes: Uint8Array) => string;
-declare const IsValid: (params: string, value?: string) => boolean;
-declare const IsId: (set: Set<string>) => string;
-declare const IsToken: (set: Set<string>) => string;
-declare const Token: () => string;
-declare const Id: () => string;
 
-export { Token as Token, Id as Id, Binary, Bytes, Hexadecimal, regex, IsValid, IsToken, IsId};
+export { cocc };
 
 
 
