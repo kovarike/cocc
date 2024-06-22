@@ -37,28 +37,15 @@
 //   Uid as Uid
 // };
 
-import { TokenCaracter } from "./caracterRandom/tokencaracterToke";
-import { CoreToken } from "./core/token";
-import { Authenticate} from "./auth/authToken";
-import { ValidationToken } from "./setValidation/validationToken";
-import { Token } from "./cocc";
 
 
-import { UIDCaracter } from "./caracterRandom/caracterUID";
-import { CoreUID } from "./core/uid";
-import { AuthenticateUID} from "./auth/authUID";
-import { ValidationUID } from "./setValidation/validationUID";
-import { Uid } from "./cocc";
 
-export {
-  TokenCaracter,
-  CoreToken,
-  Authenticate,
-  ValidationToken,
-  UIDCaracter,
-  CoreUID,
-  AuthenticateUID,
-  ValidationUID,
-  Token,
-  Uid
+
+import { IsValid} from "./isValidation/isValid";             
+import { Token, Id } from "./random/index";
+
+export const cocc = {
+ IsValid,
+ Token,
+ Id
 };

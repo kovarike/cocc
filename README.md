@@ -1,11 +1,6 @@
-
-
-
-
 # @kovarike/cocc
-Generation of token's and id's.
 
-The system returns functions Token and Uid . 
+The system uses a combination of binary, bytes and hexadecimals to generate the sequence that gives the base. using RegEx to define patterns when generating the Id and Token. . 
 
 
 [![NPM](https://img.shields.io/npm/v/@kovarike/cocc.svg?logo=npm)](https://www.npmjs.com/package/@kovarike/cocc)
@@ -22,82 +17,72 @@ npm i @kovarike/cocc
 
 ## Basic Usage
 
-Just call one of the `{Token, Uid}` functions after importing them:
+Just call one of the `{Token, Id}` functions after importing them:
 
 ```typescript
-import {Token, Uid} from '@kovarike/cocc'
+import {cocc} from '@kovarike/cocc'
 
-console.log(Token()) // 47ljai96dgh523k8b6105ef7c 
-console.log(Uid()) // 4159623708579524829 
+console.log(cocc.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b 
+console.log(cocc.Id()) // 008a0326-b64f-427a-a654-82628fc3e033
+ 
 ```
 
 
 ```javascript
-const {Token, Uid} = require("@kovarike/cocc")
+const {cocc} = require("@kovarike/cocc")
 
-console.log(Token()) // 47ljai96dgh523k8b6105ef7c 
-console.log(Uid()) // 4159623708579524829 
+console.log(cocc.Token()) // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b
+console.log(cocc.Id()) // 008a0326-b64f-427a-a654-82628fc3e033
+ 
 ```
 ## API
 
 ### `@kovarike/cocc`
 
-`Token` — With each call, the function returns a Token.
+`Token` — With each call, the function returns a Token. which follows the Token standard.
 
-`Uid` — With each call, the function returns a Uid.
+`Id` — With each call, the function returns an ID that follows the uuid pattern.
 
-#### Description
 
 ```typescript
-const token: string = ValidationToken()
-function Token(): TypeToken | string {
-  const setSequence: Set<string> = new Set();
-  const auth: string = Authenticate(token, setSequence)
-
-  return auth; // 47ljai96dgh523k8b6105ef7c 
+export function Token(){
+  const set: Set<string> = new Set();
+  const token = IsToken({set}) 
+  return token; // Xpyci2fycXsbfNhVvSY9IwLejSuKqQZpbt1b
 }
 
-
-
-const uid: string  = ValidationUID()
-function Uid():TypeUid | string {
-  const setSequence: Set<string> = new Set();
-  const auth: string  = AuthenticateUID(uid, setSequence)
-  return auth; // 4159623708579524829 
+export function Id(): string {
+  const set: Set<string> = new Set();
+  const id  = IsId({set})
+  return id; // 008a0326-b64f-427a-a654-82628fc3e033
 }
 
 ```
 
-Here we receive the (hash) each `Token and Uid` and ensuring that it will be unique.
+`IsValid` — The IsValid function receives the Id as its first parameter and the Token as its optional second parameter. The function returns a boolean (true or false) to indicate whether it is following the pattern established in the RegEx.
 
 ```typescript
-import { ValidationToken } from "../setValidation/validationToken"
-
-export function Authenticate(sequence: string, setSequence: Set<string>): string {
-    const token: string = ValidationToken();
-
-    if (setSequence.has(token)) {
-        return Authenticate(sequence, setSequence);
-    } else {
-        setSequence.add(token);
-        return  token;
-    }
+export function IsValid(params: string, value?:string): boolean {
+  if (value) {
+    return (regex.v4.test(params) || regex.v5.test(params)) && regex.token.test(value);
+  } else {
+    return regex.v4.test(params) || regex.v5.test(params) || regex.token.test(params);
+  }
 }
 
+```
 
+```typescript
+import {cocc} from '@kovarike/cocc'
 
-import { ValidationUID } from "../setValidation/validationUID";
+const uuid = cocc.Id();
+cocc.IsValid(uuid);
 
-export function AuthenticateUID(sequence: string, setSequence: Set<string>): string {
-    const UID: string = ValidationUID();
+const token = cocc.Token();
+cocc.IsValid(token);
 
-    if (setSequence.has(UID)) {
-        return AuthenticateUID(sequence, setSequence);
-    } else {
-        setSequence.add(UID);
-        return  UID;
-    }
-}
+cocc.IsValid(uuid, token); 
+
 ```
 
 ## Authors and License

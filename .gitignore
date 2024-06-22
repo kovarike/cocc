@@ -5,3 +5,4 @@ test/test.ts
 dist
 ./dist
 dist
+.npmrc

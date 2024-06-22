@@ -1,20 +1,24 @@
+declare const regex: {
+  v4: RegExp;
+  v5: RegExp;
+  token: RegExp
+};
 
+
+
+declare const Binary: () => string;
+declare const Bytes: (binaryString: string) => Uint8Array;
+declare const Hexadecimal: (bytes: Uint8Array) => string;
+declare const IsValid: (params: string, value?: string) => boolean;
+declare const IsId: (set: Set<string>) => string;
+declare const IsToken: (set: Set<string>) => string;
 declare const Token: () => string;
-declare const ValidationToken: () => string;
-declare const Authenticate: (value: string, set: Set<string>) => string;
-// declare const AuthenticateToken: (value: string) => string;
-declare const ShuffleToken: (value: string[]) => void;
-declare const CoreToken: (value: string[], set: Set<string>) => string;
-export { Token as Token, ValidationToken, Authenticate, ShuffleToken, CoreToken};
+declare const Id: () => string;
+
+export { Token as Token, Id as Id, Binary, Bytes, Hexadecimal, regex, IsValid, IsToken, IsId};
 
 
-declare const Uid: () => string;
-declare const ValidationUID: () => string;
-declare const AuthenticateUID: (value: string, set: Set<string>) => string;
-// declare const IsAuthUID: (value: string) => string;
-declare const ShuffleUID: (value: number[]) => void;
-declare const CoreUID: (value: number[], set: Set<string>) => string;
-export { Uid as Uid, ValidationUID, AuthenticateUID, ShuffleUID, CoreUID};
+
 
 
 

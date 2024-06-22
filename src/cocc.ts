@@ -1,19 +1,23 @@
-import { Token, Uid}from "./core/index"
+import { Token, Id }from "./random/index"
+import { IsValid } from "./isValidation/isValid"
 
-export{
-  Token as Token,
-  Uid as Uid
+export const cocc = {
+  Token,
+  Id,
+  IsValid
 }
 
 
 export * from "./types/types"
-export * from './caracterRandom/tokencaracterToke';
-export * from './core/token';
-export * from './setValidation/validationToken';
-export * from './auth/authToken';
+export * from './Binary/binary';
+export * from './Bytes/bytes';
+export * from './Hexadecimal/hex';
+export * from './RegExp/regExp';
+export * from './isValidation/isValid';
+export * from './random/id';
+export * from './random/token';
 
 
-export * from './caracterRandom/caracterUID';
-export * from './core/uid';
-export * from './setValidation/validationUID';
-export * from './auth/authUID';
+
+
+
