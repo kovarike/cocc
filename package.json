@@ -1,6 +1,6 @@
 {
   "name": "@kovarike/cocc",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "description": "Created a sistem for generation of token's and id's",
   "files": [
     "dist"
@@ -22,11 +22,9 @@
   ],
   "author": "Danilo Silva",
   "license": "MIT",
-  
   "publishConfig": {
-  "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
+    "@YOUR-USERNAME:registry": "https://npm.pkg.github.com"
   },
-
   "repository": {
     "type": "git",
     "url": "https://github.com/kovarike/cocc.git"
@@ -42,6 +40,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@kovarike/cocc": "^1.7.5",
     "uuidv4": "^6.2.13"
   }
 }
