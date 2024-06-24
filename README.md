@@ -1,6 +1,6 @@
 # @kovarike/cocc
 
-The system uses a combination of binary, bytes and hexadecimals to generate the sequence that gives the base. using RegEx to define patterns when generating the Id and Token. . 
+The system uses a combination of binary, bytes and hexadecimals to generate the sequence that gives the base. using RegEx to define patterns when generating the Id and Token.  
 
 
 [![NPM](https://img.shields.io/npm/v/@kovarike/cocc.svg?logo=npm)](https://www.npmjs.com/package/@kovarike/cocc)
@@ -9,10 +9,10 @@ The system uses a combination of binary, bytes and hexadecimals to generate the 
 ## Installing
 
 ```shell
-npm i @kovarike/cocc
+npm i binary-uuid
 
 # If you're using NPM:
-# npm install @kovarike/cocc
+# npm install binary-uuid
 ```
 
 ## Basic Usage

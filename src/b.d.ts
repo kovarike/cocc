@@ -1,13 +1,13 @@
-declare const cocc: {
+declare const binary: {
   IsValid: (params: string, value?: string) => boolean,
   Token: () => string,
-  Id: () => string,
+  UUID: () => string,
 }
 
 
 
 
-export { cocc };
+export { binary };
 
 
 

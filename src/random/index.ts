@@ -8,7 +8,7 @@ export function Token(){
   return token;
 }
 
-export function Id(): string {
+export function UUID(): string {
   const set: Set<string> = new Set();
   const id  = IsId({set})
   return id;

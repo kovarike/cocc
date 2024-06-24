@@ -1,20 +1,20 @@
 {
-  "name": "@kovarike/cocc",
+  "name": "binary-uuid",
   "version": "1.7.7",
   "description": "Created a sistem for generation of token's and id's",
   "files": [
     "dist"
   ],
-  "main": "dist/cocc.commonjs.js",
-  "module": "dist/cocc.js",
-  "typings": "dist/cocc.d.ts",
+  "main": "dist/b.commonjs.js",
+  "module": "dist/b.js",
+  "typings": "dist/b.d.ts",
   "scripts": {
-    "dev": "tsx watch src/cocc.ts",
+    "dev": "tsx watch src/b.ts",
     "index": "tsx watch src/random/index.ts",
     "test": "tsx watch test/test.ts",
     "js": "node --watch --trace-warnings test/test.js",
     "build": "tsup src",
-    "start": "node dist/cocc.js"
+    "start": "node dist/b.js"
   },
   "keywords": [
     "id",
@@ -27,20 +27,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kovarike/cocc.git"
+    "url": "https://github.com/kovarike/binary-uuid.git"
   },
   "bugs": {
-    "url": "https://github.com/kovarike/cocc/issues"
+    "url": "https://github.com/kovarike/binary-uuid/issues"
   },
-  "homepage": "https://github.com/kovarike/cocc#readme",
+  "homepage": "https://github.com/kovarike/binary-uuid#readme",
   "devDependencies": {
     "@types/node": "^20.12.11",
     "tsup": "^8.0.2",
     "tsx": "^4.10.2",
     "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "@kovarike/cocc": "^1.7.6",
-    "uuidv4": "^6.2.13"
   }
+
 }
